@@ -1,0 +1,10 @@
+@import "../../common/styles/global-variables.scss";
+
+.site-footer {
+  background-color: $dove-gray;
+
+  &__menu-link {
+    font-size: 18px;
+    color: $white;
+  }
+}

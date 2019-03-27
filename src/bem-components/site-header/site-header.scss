@@ -6,4 +6,25 @@
   padding: 15px 0;
   background-color: $white;
   z-index: 3;
+
+  &__menu-item {
+    position: relative;
+    margin-right: 15px;
+    padding-right: 15px;
+    height: 22px;
+    &::after{
+      content: '';
+      position: absolute;
+      top: 4px;
+      right: 0;
+      width: 1px;
+      height: calc(100% - 2px);
+      background-color: $black;
+    }
+  }
+
+  &__menu-link {
+    font-size: 20px;
+    color: $black;
+  }
 }
