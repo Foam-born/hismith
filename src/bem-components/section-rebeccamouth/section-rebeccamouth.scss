@@ -1,0 +1,33 @@
+@import "../../common/styles/global-variables.scss";
+
+.section-rebeccamouth {
+  min-height: 516px;
+  color: $main-shaft;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__content {
+    max-width: 422px;
+  }
+
+  &__title {
+    margin-top: 80px;
+    color: $red-orange;
+    font-size: 28px;
+    line-height: 34px;
+    font-family: $font-family-pt-serif;
+  }
+
+  &__text {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-family: $font-family-pt-sans;
+    line-height: 26px;
+    font-size: 18px;
+    color: $black;
+  }
+
+  &__button-wrapper {
+    text-align: right;
+  }
+}

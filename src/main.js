@@ -37,6 +37,7 @@ import './bem-components/section-questions/section-questions.scss'
 import './bem-components/section-questions/section-questions'
 import './bem-components/section-two-parts/section-two-parts.scss'
 import './bem-components/section-two-parts/section-two-parts'
+import './bem-components/section-rebeccamouth/section-rebeccamouth.scss'
 
 
 import './bem-components/site-header/site-header.scss'
