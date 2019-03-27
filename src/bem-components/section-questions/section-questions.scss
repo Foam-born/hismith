@@ -1,0 +1,10 @@
+@import "../../common/styles/global-variables.scss";
+
+.section-questions {
+  color: $white;
+
+  &__slider-item {
+    height: 589px;
+    padding-bottom: 60px;
+  }
+}

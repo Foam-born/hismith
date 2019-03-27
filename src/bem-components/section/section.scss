@@ -4,6 +4,20 @@
   position: relative;
   padding: 60px 0;
 
+  &--slider-screen {
+    padding: 0;
+
+    .section__slider-item {
+      & .container {
+        height: 100%;
+      }
+      & .row {
+        height: 100%;
+        padding-left: 70px;
+      }
+    }
+  }
+
   &__content {
     padding-left: 70px;
   }

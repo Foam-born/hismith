@@ -1,6 +1,6 @@
 'use strict';
 
-const block = 'first-screen';
+const block = 'section-questions';
 
 const elems = {
     sliderList: block + '__slider-list',
@@ -11,10 +11,10 @@ const elems = {
 
 $(document).ready(function () {
     const $block = $('.' + block),
-          $sliderList = $block.find('.' + elems.sliderList),
-          $arrowPrev = $block.find('.' + elems.arrowPrev),
-          $arrowNext = $block.find('.' + elems.arrowNext),
-          $sliderItem = $block.find('.' + elems.sliderItem);
+        $sliderList = $block.find('.' + elems.sliderList),
+        $arrowPrev = $block.find('.' + elems.arrowPrev),
+        $arrowNext = $block.find('.' + elems.arrowNext),
+        $sliderItem = $block.find('.' + elems.sliderItem);
 
     $sliderList.on('afterChange', function () {
         if ($sliderList.slick('slickCurrentSlide') !== 0) {

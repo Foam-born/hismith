@@ -33,6 +33,8 @@ import './bem-components/section-rosaburgh/section-rosaburgh'
 import './bem-components/section-gerryville/section-gerryville.scss'
 import './bem-components/section-gerryville/section-gerryville'
 import './bem-components/section-indicators/section-indicators.scss'
+import './bem-components/section-questions/section-questions.scss'
+import './bem-components/section-questions/section-questions'
 
 import './bem-components/site-header/site-header.scss'
 
