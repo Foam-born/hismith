@@ -9,13 +9,11 @@ $(document).ready(function () {
 
     $block.each(function () {
 
-        const classes = $(this).attr("class"),
-              id = $(this).attr("id"),
-              name = $(this).attr("name");
+        const classes = $(this).attr("class");
 
         let template = '<div class="' + classes + '">';
 
-        template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+        template += '<span class="custom-select-trigger">' + this.dataset.placeholder + '</span>';
 
         template += '<div class="custom-options">';
 
