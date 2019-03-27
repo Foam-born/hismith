@@ -14,8 +14,7 @@ $(document).ready(function () {
     const $block = $('.' + block),
         $sliderList = $block.find('.' + elems.sliderList),
         $arrowPrev = $block.find('.' + elems.arrowPrev),
-        $arrowNext = $block.find('.' + elems.arrowNext),
-        $sliderItem = $block.find('.' + elems.sliderItem);
+        $arrowNext = $block.find('.' + elems.arrowNext);
 
     $sliderList.on('afterChange', function () {
         let $passiveSlides = $('.' + elems.sliderItem + ':not(.slick-active)'),

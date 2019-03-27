@@ -6,6 +6,17 @@
   &__slider-item {
     height: 690px;
     padding-bottom: 60px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      right: 35px;
+      top: 105px;
+      width: 243px;
+      height: 469px;
+      background-image: url('/images/lines--red.png');
+      background-size: cover;
+    }
   }
 
   &__slide-number {

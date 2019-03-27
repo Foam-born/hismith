@@ -8,6 +8,11 @@
     position: relative;
   }
 
+  &__slide-content:focus {
+    outline: none;
+    border: none;
+  }
+
   &__slider-list {
     margin-top: 50px;
 
