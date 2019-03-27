@@ -34,6 +34,7 @@
 
   &__slider-item {
     transition: .5s;
+    outline: none !important;
   }
 
   &__slider-item:not(.slick-active) {

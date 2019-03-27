@@ -45,6 +45,10 @@
     color: $white;
   }
 
+   &__slider-item {
+     outline: none !important;
+   }
+
   &__text-slider {
     padding-left: 101px;
     color: $dove-gray;
