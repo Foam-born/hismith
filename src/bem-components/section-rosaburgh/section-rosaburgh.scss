@@ -1,0 +1,34 @@
+@import "../../common/styles/global-variables.scss";
+
+.section-rosaburgh {
+  padding-bottom: 35px;
+  background-color: $dove-gray;
+  color: $white;
+
+  &__slider-item {
+    padding-top: 50px;
+  }
+
+  &__slide-content {
+    padding-right: 80px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-family: $font-family-pt-sans;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0;
+    font-family: $font-family-pt-serif;
+    font-style: italic;
+  }
+
+  &__button-wrapper {
+    text-align: right;
+  }
+}

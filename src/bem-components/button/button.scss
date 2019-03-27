@@ -1,0 +1,32 @@
+@import "../../common/styles/global-variables.scss";
+
+.button{
+  margin-top: 56px;
+  padding: 0;
+  position: relative;
+  background-color: transparent;
+  border: none;
+  color: $white;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  font-family: $font-family-pt-sans;
+  transition: .3s;
+
+  &::before {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    right: 0;
+    content: '';
+    width: 2px;
+    height: 39px;
+    background-color: $red-orange;
+    transition: .3s;
+  }
+
+  &:hover {
+    &::before {
+      transform: translateY(10px);
+    }
+  }
+}

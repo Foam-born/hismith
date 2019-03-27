@@ -1,17 +1,513 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>hismith</title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but hismith doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+    <title>Тестовое задание для HISMITH</title>
+
+    <style>
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #ffffff;
+            z-index: 99;
+            transition: 1s;
+        }
+
+        .preloader--hidden {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="preloader" id="preloader"></div>
+
+<script>(function () {
+    const preloader = document.getElementById('preloader');
+    document.addEventListener('DOMContentLoaded', function () {
+        preloader.classList.add('preloader--hidden');
+        setTimeout(function () {
+            preloader.style.zIndex = -99;
+        }, 1000);
+    });
+})();</script>
+
+<noscript>
+    <strong>We're sorry but hismith doesn't work properly without JavaScript enabled. Please enable it to
+        continue.</strong>
+</noscript>
+
+<div id="app">
+    <header class="section site-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="languages-switch site-header__languages-switch">
+                        <ul class="languages-switch__list">
+                            <li class="languages-switch__item">
+                                <a href="/" class="languages-switch__link languages-switch__link--selected">RUS</a>
+                            </li>
+
+                            <li class="languages-switch__item">
+                                <a href="/" class="languages-switch__link">ENG</a>
+                            </li>
+
+                            <li class="languages-switch__item">
+                                <a href="/" class="languages-switch__link">CHN</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="row justify-content-between align-items-end">
+                        <div class="col-2">
+                            <a href="/" class="logo">
+                                <svg class="logo__img">
+                                    <use xlink:href="images/sprite.svg#symbol__logo"></use>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="col-10 d-flex justify-content-end align-items-end">
+                            <nav class="main-menu">
+                                <ul class="main-menu__list">
+                                    <li class="main-menu__item">
+                                        <a href="#first" class="main-menu__link">Раздел №1</a>
+                                    </li>
+
+                                    <li class="main-menu__item">
+                                        <a href="#second" class="main-menu__link">Раздел №2</a>
+                                    </li>
+
+                                    <li class="main-menu__item">
+                                        <a href="#third" class="main-menu__link">Раздел №3</a>
+                                    </li>
+
+                                    <li class="main-menu__item">
+                                        <a href="#fourth" class="main-menu__link">Раздел №4</a>
+                                    </li>
+
+                                    <li class="main-menu__item">
+                                        <a href="#fifth" class="main-menu__link">Раздел №5</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <a href="/" class="search-btn site-header__search-btn">
+                                <svg class="search-btn__img">
+                                    <use xlink:href="images/sprite.svg#symbol__search"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section section--slider-screen first-screen">
+        <div class="section__arrows-container">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="section__arrow first-screen__arrow section__arrow-prev first-screen__arrow-prev">
+                        <svg class="section__arrow-img">
+                            <use xlink:href="images/sprite.svg#symbol__arrow"></use>
+                        </svg>
+                    </div>
+
+                    <div class="first-screen__arrow first-screen__arrow-next section__arrow section__arrow-next">
+                        <svg class="section__arrow-img">
+                            <use xlink:href="images/sprite.svg#symbol__arrow"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="first-screen__slider-list section__slider-list">
+            <li class="first-screen__slider-item section__slider-item"
+                style="background-image: url('/images/first-screen.jpg')">
+                <div class="container">
+                    <div class="row flex-column justify-content-end">
+                        <div class="first-screen__slide-number">
+                            <span>1</span>
+
+                            <span>7</span>
+                        </div>
+
+                        <header class="section__h1">Success Steps For Your Personal Or Business Life
+                            Success Steps For Your
+                        </header>
+
+                        <div class="first-screen__button-wrapper">
+                            <button class="button first-screen__button">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="first-screen__slider-item section__slider-item"
+                style="background-image: url('/images/first-screen.jpg')">
+                <div class="container">
+                    <div class="row flex-column justify-content-end">
+                        <div class="first-screen__slide-number">
+                            <span>2</span>
+
+                            <span>7</span>
+                        </div>
+
+                        <header class="section__h1">Success Steps For Your Personal Or Business Life
+                            Success Steps For Your
+                        </header>
+
+                        <div class="first-screen__button-wrapper">
+                            <button class="button first-screen__button">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="first-screen__slider-item section__slider-item"
+                style="background-image: url('/images/first-screen.jpg')">
+                <div class="container">
+                    <div class="row flex-column justify-content-end">
+                        <div class="first-screen__slide-number">
+                            <span>3</span>
+
+                            <span>7</span>
+                        </div>
+
+                        <header class="section__h1">Success Steps For Your Personal Or Business Life
+                            Success Steps For Your
+                        </header>
+
+                        <div class="first-screen__button-wrapper">
+                            <button class="button first-screen__button">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="first-screen__slider-item section__slider-item"
+                style="background-image: url('/images/first-screen.jpg')">
+                <div class="container">
+                    <div class="row flex-column justify-content-end">
+                        <div class="first-screen__slide-number">
+                            <span>4</span>
+
+                            <span>7</span>
+                        </div>
+
+                        <header class="section__h1">Success Steps For Your Personal Or Business Life
+                            Success Steps For Your
+                        </header>
+
+                        <div class="first-screen__button-wrapper">
+                            <button class="button first-screen__button">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="first-screen__slider-item section__slider-item"
+                style="background-image: url('/images/first-screen.jpg')">
+                <div class="container">
+                    <div class="row flex-column justify-content-end">
+                        <div class="first-screen__slide-number">
+                            <span>5</span>
+
+                            <span>7</span>
+                        </div>
+
+                        <header class="section__h1">Success Steps For Your Personal Or Business Life
+                            Success Steps For Your
+                        </header>
+
+                        <div class="first-screen__button-wrapper">
+                            <button class="button first-screen__button">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="first-screen__slider-item section__slider-item"
+                style="background-image: url('/images/first-screen.jpg')">
+                <div class="container">
+                    <div class="row flex-column justify-content-end">
+                        <div class="first-screen__slide-number">
+                            <span>6</span>
+
+                            <span>7</span>
+                        </div>
+
+                        <header class="section__h1">Success Steps For Your Personal Or Business Life
+                            Success Steps For Your
+                        </header>
+
+                        <div class="first-screen__button-wrapper">
+                            <button class="button first-screen__button">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="first-screen__slider-item section__slider-item"
+                style="background-image: url('/images/first-screen.jpg')">
+                <div class="container">
+                    <div class="row flex-column justify-content-end">
+                        <div class="first-screen__slide-number">
+                            <span>7</span>
+
+                            <span>7</span>
+                        </div>
+
+                        <header class="section__h1">Success Steps For Your Personal Or Business Life
+                            Success Steps For Your
+                        </header>
+
+                        <div class="first-screen__button-wrapper">
+                            <button class="button first-screen__button">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="section section-reasons">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <header class="section__h2 section-reasons__h2">Top 3 Reasons Why You Need Cookie:</header>
+                </div>
+
+                <div class="col-4">
+                    <select class="site-select" name="firstSelect" id="firstSelect">
+                        <option value="jefferyRamos">Jeffery Ramos</option>
+
+                        <option value="joeRobinson">Joe Robinson</option>
+                    </select>
+                </div>
+
+                <div class="col-4">
+                    <select class="site-select" name="secondSelect" id="secondSelect">
+                        <option value="joeRobinson">Joe Robinson</option>
+
+                        <option value="jefferyRamos">Jeffery Ramos</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-rosaburgh">
+        <div class="container">
+            <div class="row section__content">
+                <div class="col-3">
+                    <header class="section__h2 section-rosaburgh__h2">Rosaburgh</header>
+                </div>
+
+                <div class="col-9">
+                    <div class="row">
+                        <div class="col-10">
+                            <ul class="section-rosaburgh__slider-list section__slider-list">
+                                <li class="section-rosaburgh__slider-item section__slider-item">
+                                    <div class="section-rosaburgh__slide-content">
+                                        <h3 class="section-rosaburgh__title">Unmatched Toner Cartridge Quality<br>
+                                            20 Less Than Oem Price</h3>
+
+                                        <p class="section-rosaburgh__text">A Pocket PC is a handheld computer, which features many of the same capabilities as a modern PC.
+                                            These handy little devices allow individuals to retrieve and store e-mail messages, create a contact file, coordinate appointments.</p>
+
+                                        <div class="section-rosaburgh__button-wrapper">
+                                            <button class="button section-rosaburgh__button">Подробнее</button>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="section-rosaburgh__slider-item section__slider-item">
+                                    <div class="section-rosaburgh__slide-content">
+                                        <h3 class="section-rosaburgh__title">Unmatched Toner Cartridge Quality<br>
+                                            20 Less Than Oem Price</h3>
+
+                                        <p class="section-rosaburgh__text">A Pocket PC is a handheld computer, which features many of the same capabilities as a modern PC.
+                                            These handy little devices allow individuals to retrieve and store e-mail messages, create a contact file, coordinate appointments.</p>
+
+                                        <div class="section-rosaburgh__button-wrapper">
+                                            <button class="button section-rosaburgh__button">Подробнее</button>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="section-rosaburgh__slider-item section__slider-item">
+                                    <div class="section-rosaburgh__slide-content">
+                                        <h3 class="section-rosaburgh__title">Unmatched Toner Cartridge Quality<br>
+                                            20 Less Than Oem Price</h3>
+
+                                        <p class="section-rosaburgh__text">A Pocket PC is a handheld computer, which features many of the same capabilities as a modern PC.
+                                            These handy little devices allow individuals to retrieve and store e-mail messages, create a contact file, coordinate appointments.</p>
+
+                                        <div class="section-rosaburgh__button-wrapper">
+                                            <button class="button section-rosaburgh__button">Подробнее</button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-2 row">
+                            <div class="section__arrow section-rosaburgh__arrow section__arrow-prev section-rosaburgh__arrow-prev">
+                                <svg class="section__arrow-img">
+                                    <use xlink:href="images/sprite.svg#symbol__arrow"></use>
+                                </svg>
+                            </div>
+
+                            <div class="section__arrow section-rosaburgh__arrow section__arrow section__arrow-next section-rosaburgh__arrow-next">
+                                <svg class="section__arrow-img">
+                                    <use xlink:href="images/sprite.svg#symbol__arrow"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-gerryville">
+        <div class="container">
+            <div class="row flex-column section__content">
+                <div class="col-12">
+                    <header class="section__h2">Gerryville</header>
+                </div>
+
+                <div class="col-12">
+                    <div class="row align-items-center">
+                        <div class="col-1">
+                            <div class="section__arrow section-gerryville__arrow section__arrow-prev section-gerryville__arrow-prev">
+                                <svg class="section__arrow-img">
+                                    <use xlink:href="images/sprite.svg#symbol__arrow"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="col-10">
+                            <ul class="section-gerryville__slider-list section__slider-list">
+                                <li class="section-gerryville__slider-item section__slider-item">
+                                    <div class="section-gerryville__slide">
+                                        <div class="section-gerryville__slide-content" style="background-image: url('/images/item_1.png')">
+                                            <div class="row flex-column">
+                                                <h4 class="section-gerryville__slide-title">Delivering Kisses And Miracles</h4>
+
+                                                <p class="section-gerryville__slide-subtitle">Port Ivy</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="section-gerryville__slider-item section__slider-item">
+                                    <div class="section-gerryville__slide">
+                                        <div class="section-gerryville__slide-content" style="background-image: url('/images/item_2.png')">
+                                            <div class="row flex-column">
+                                                <h4 class="section-gerryville__slide-title">Delivering Kisses And Miracles</h4>
+
+                                                <p class="section-gerryville__slide-subtitle">Port Ivy</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="section-gerryville__slider-item section__slider-item">
+                                    <div class="section-gerryville__slide">
+                                        <div class="section-gerryville__slide-content" style="background-image: url('/images/item_3.png')">
+                                            <div class="row flex-column">
+                                                <h4 class="section-gerryville__slide-title">Delivering Kisses And Miracles</h4>
+
+                                                <p class="section-gerryville__slide-subtitle">Port Ivy</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="section-gerryville__slider-item section__slider-item">
+                                    <div class="section-gerryville__slide">
+                                        <div class="section-gerryville__slide-content" style="background-image: url('/images/item_4.png')">
+                                            <div class="row flex-column">
+                                                <h4 class="section-gerryville__slide-title">Delivering Kisses And Miracles</h4>
+
+                                                <p class="section-gerryville__slide-subtitle">Port Ivy</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="section-gerryville__slider-item section__slider-item">
+                                    <div class="section-gerryville__slide">
+                                        <div class="section-gerryville__slide-content" style="background-image: url('/images/item_5.png')">
+                                            <div class="row flex-column">
+                                                <h4 class="section-gerryville__slide-title">Delivering Kisses And Miracles</h4>
+
+                                                <p class="section-gerryville__slide-subtitle">Port Ivy</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="section-gerryville__slider-item section__slider-item">
+                                    <div class="section-gerryville__slide">
+                                        <div class="section-gerryville__slide-content" style="background-image: url('/images/item_6.png')">
+                                            <div class="row flex-column">
+                                                <h4 class="section-gerryville__slide-title">Delivering Kisses And Miracles</h4>
+
+                                                <p class="section-gerryville__slide-subtitle">Port Ivy</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-1">
+                            <div class="section__arrow section-gerryville__arrow section__arrow section__arrow-next section-gerryville__arrow-next">
+                                <svg class="section__arrow-img">
+                                    <use xlink:href="images/sprite.svg#symbol__arrow"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+
+
+</body>
 </html>

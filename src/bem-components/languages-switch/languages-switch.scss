@@ -1,0 +1,27 @@
+@import "../../common/styles/global-variables.scss";
+
+.languages-switch {
+  float: right;
+  font-size: 12px;
+  color: $black;
+
+  &__list {
+    display: flex;
+    list-style-type: none;
+  }
+
+  &__item {
+    margin-right: 5px;
+
+  }
+
+  &__link {
+    text-transform: uppercase;
+    color: $black;
+    font-family: $font-family-pt-sans;
+    &--selected {
+      color: $red-orange;
+    }
+  }
+
+}

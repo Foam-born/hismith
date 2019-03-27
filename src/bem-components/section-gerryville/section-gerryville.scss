@@ -1,0 +1,31 @@
+@import "../../common/styles/global-variables.scss";
+
+.section-gerryville {
+  color: $dove-gray;
+
+  &__slide {
+    padding-left: 20px;
+  }
+
+  &__slide-content {
+    height: 564px;
+    background-repeat: no-repeat;
+    background-size: 100% 564px;
+  }
+
+  &__arrow-prev {
+    opacity: 1;
+  }
+
+  &__slide-title {
+    font-size: 17px;
+    color: $black;
+    font-family: $font-family-pt-sans;
+  }
+
+  &__slide-subtitle {
+    font-size: 10px;
+    font-family: $font-family-pt-sans;
+    color: $black;
+  }
+}

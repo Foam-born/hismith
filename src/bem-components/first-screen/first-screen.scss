@@ -1,0 +1,54 @@
+@import "../../common/styles/global-variables.scss";
+
+.first-screen {
+  padding: 0;
+  color: $white;
+
+  &__slider-item {
+    height: 690px;
+    padding-bottom: 60px;
+    & .container {
+      height: 100%;
+    }
+    & .row {
+      height: 100%;
+      padding-left: 70px;
+    }
+  }
+
+  &__slide-number {
+    margin-bottom: 30px;
+    font-size: 20px;
+    transform: translateX(-20px);
+
+    & span:first-child {
+      position: relative;
+      margin-right: 10px;
+      padding-right: 15px;
+
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        content: '';
+        width: 2px;
+        height: 20px;
+        background-color: $red-orange;
+      }
+    }
+
+
+  }
+
+  &__button.button {
+    font-size: 24px;
+    font-style: italic;
+    color: $red-orange;
+    text-transform: initial;
+
+    &::before {
+      left: 0;
+      height: 45px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import "../../common/styles/global-variables.scss";
+
+.logo {
+  &__img {
+    width: 157px;
+    height: 44px;
+    object-fit: contain;
+    fill: $black;
+    transition: .3s;
+
+    &:hover {
+      fill: $red-orange;
+    }
+  }
+}
