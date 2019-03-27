@@ -40,16 +40,10 @@
     transform: rotate(180deg);
     cursor: auto;
     opacity: 0;
-    &:hover {
-      right: 2px;
-    }
   }
 
   &__arrow-next {
     transition: .5s;
-    &:hover {
-      left: 2px;
-    }
   }
 
   &__arrow-img {

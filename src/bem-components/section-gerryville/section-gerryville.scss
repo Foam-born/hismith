@@ -1,20 +1,77 @@
 @import "../../common/styles/global-variables.scss";
 
 .section-gerryville {
+  padding: 60px 0 0;
   color: $dove-gray;
 
-  &__slide {
-    padding-left: 20px;
+  &__content {
+    position: relative;
+  }
+
+  &__slider-list {
+    margin-top: 50px;
+
+    .draggable {
+      overflow: visible;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 100%;
+        width: 1000%;
+        height: 100%;
+        background-color: $white;
+        z-index: 2;
+      }
+    }
+  }
+
+  &__slider-item {
+    transition: .5s;
+  }
+
+  &__slider-item:not(.slick-active) {
+    opacity: .4;
+
+    .section-gerryville__slide-text {
+      display: none;
+    }
   }
 
   &__slide-content {
+    position: relative;
     height: 564px;
-    background-repeat: no-repeat;
-    background-size: 100% 564px;
+  }
+
+  &__slide-img {
+    display: block;
+    max-height: 100%;
+  }
+
+  &__slide-text {
+    position: absolute;
+    top: 50px;
+    left: 255px;
+    white-space: nowrap;
+    z-index: 1;
+    transition: .5s;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 255px;
+    z-index: 2;
   }
 
   &__arrow-prev {
+    left: 0;
     opacity: 1;
+    cursor: pointer;
+  }
+
+  &__arrow-next {
+    right: 0;
   }
 
   &__slide-title {
@@ -24,8 +81,28 @@
   }
 
   &__slide-subtitle {
+    margin-top: 5px;
+    position: relative;
+    display: inline;
     font-size: 10px;
     font-family: $font-family-pt-sans;
     color: $black;
+
+    &::before {
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      content: '';
+      width: 2px;
+      height: 10px;
+      background-color: $red-orange;
+      transition: .3s;
+    }
+
+    &:hover {
+      &::before {
+        transform: translateY(3px);
+      }
+    }
   }
 }
