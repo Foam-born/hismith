@@ -1,0 +1,86 @@
+@import "../../common/styles/global-variables.scss";
+
+.section-two-parts {
+  padding: 0;
+
+  &__h2 {
+    margin-bottom: 64px;
+  }
+
+  &__arrow {
+    margin-top: 100px;
+  }
+
+  &__img {
+    width: 300px;
+    height: 212px;
+    border-radius: 1px;
+  }
+
+  &__figcaption {
+    margin-top: 13px;
+    font-family: $font-family-pt-serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 34px;
+  }
+
+  &__title {
+    margin-bottom: 28px;
+    color: $red-orange;
+    font-family: $font-family-pt-sans;
+    font-size: 30px;
+    line-height: 23px;
+  }
+
+  &__text {
+    font-family: $font-family-pt-serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  &__photo-slider {
+    padding-right: 50px;
+    color: $white;
+  }
+
+  &__text-slider {
+    padding-left: 101px;
+    color: $dove-gray;
+  }
+
+  &__part {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 85px;
+
+    &--bg-dove-gray {
+      background-color: $dove-gray;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 100%;
+        background-color: $dove-gray;
+        width: 1000%;
+        height: 100%;
+      }
+    }
+
+    &--bg-alto {
+      background-color: $alto;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 100%;
+        background-color: $alto;
+        width: 1000%;
+        height: 100%;
+      }
+    }
+  }
+}

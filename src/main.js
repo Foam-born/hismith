@@ -35,6 +35,9 @@ import './bem-components/section-gerryville/section-gerryville'
 import './bem-components/section-indicators/section-indicators.scss'
 import './bem-components/section-questions/section-questions.scss'
 import './bem-components/section-questions/section-questions'
+import './bem-components/section-two-parts/section-two-parts.scss'
+import './bem-components/section-two-parts/section-two-parts'
+
 
 import './bem-components/site-header/site-header.scss'
 
