@@ -1,8 +1,11 @@
 @import "../../common/styles/global-variables.scss";
 
 .section-gerryville {
-  padding: 60px 0 0;
+  padding: 30px 0 0;
   color: $dove-gray;
+  @media(min-width: $extra-large) {
+    padding: 60px 0 0;
+  }
 
   &__content {
     position: relative;
@@ -47,21 +50,35 @@
 
   &__slide-content {
     position: relative;
-    height: 564px;
+    height: 338px;
+    @media(min-width: $extra-large) {
+      height: 564px;
+    }
   }
 
   &__slide-img {
+    margin: auto;
     display: block;
     max-height: 100%;
+    @media(min-width: $small) {
+      margin: initial;
+    }
   }
 
   &__slide-text {
     position: absolute;
-    top: 50px;
-    left: 255px;
+    top: 25px;
+    left: 310px;
     white-space: nowrap;
     z-index: 1;
     transition: .5s;
+    @media(min-width: $small) {
+      left: 145px;
+    }
+    @media(min-width: $extra-large) {
+      top: 50px;
+      left: 255px;
+    }
   }
 
   &__arrow {
@@ -81,18 +98,24 @@
   }
 
   &__slide-title {
-    font-size: 17px;
+    font-size: 10.2px;
     color: $black;
     font-family: $font-family-pt-sans;
+    @media(min-width: $extra-large) {
+      font-size: 17px;
+    }
   }
 
   &__slide-subtitle {
     margin-top: 5px;
     position: relative;
     display: inline;
-    font-size: 10px;
+    font-size: 6px;
     font-family: $font-family-pt-sans;
     color: $black;
+    @media(min-width: $extra-large) {
+      font-size: 10px;
+    }
 
     &::before {
       position: absolute;

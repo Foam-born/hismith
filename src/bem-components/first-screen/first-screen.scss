@@ -51,10 +51,14 @@
   }
 
   &__button.button {
-    font-size: 24px;
+    font-size: 14px;
     font-style: italic;
     color: $red-orange;
     text-transform: initial;
+
+    @media(min-width: $extra-large) {
+      font-size: 24px;
+    }
 
     &::before {
       left: 0;

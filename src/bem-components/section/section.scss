@@ -2,7 +2,10 @@
 
 .section {
   position: relative;
-  padding: 60px 0;
+  padding: 30px 0;
+  @media(min-width: $extra-large) {
+    padding: 60px 0;
+  }
 
   &--slider-screen {
     padding: 0;
@@ -20,13 +23,18 @@
       }
       & .row {
         height: 100%;
-        padding-left: 70px;
+        padding: 0 15px;
+        @media(min-width: $medium) {
+          padding-left: 70px;
+        }
       }
     }
   }
 
   &__content {
-    padding-left: 70px;
+    @media(min-width: $medium) {
+      padding-left: 70px;
+    }
   }
 
   &__slider-item {
@@ -90,9 +98,13 @@
   }
 
   &__h2 {
-    font-size: 34px;
-    line-height: 34px;
+    font-size: 24px;
+    line-height: 24px;
     font-family: $font-family-pt-serif;
+    @media(min-width: $large-custom){
+      font-size: 34px;
+      line-height: 34px;
+    }
   }
 }
 

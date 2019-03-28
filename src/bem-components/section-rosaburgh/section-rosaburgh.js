@@ -36,21 +36,7 @@ $(document).ready(function () {
         infinite: false,
         arrows: true,
         prevArrow: $('.' + elems.arrowPrev),
-        nextArrow: $('.' + elems.arrowNext),
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
-        ]
+        nextArrow: $('.' + elems.arrowNext)
     });
 
     function hideArrowPrev() {

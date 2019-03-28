@@ -10,22 +10,36 @@
   }
 
   &__slide-content {
-    padding-right: 80px;
     display: flex;
     flex-direction: column;
+    padding: 0 5px;
+    @media(min-width: $medium) {
+      width: 377px;
+    }
+
+    @media(min-width: $extra-large) {
+      width: 628px;
+    }
   }
 
   &__title {
-    font-size: 30px;
+    font-size: 20px;
     font-family: $font-family-pt-sans;
+    @media(min-width: $extra-large) {
+      font-size: 30px;
+    }
   }
 
   &__text {
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 11px;
+    line-height: 14px;
     letter-spacing: 0;
     font-family: $font-family-pt-serif;
     font-style: italic;
+    @media(min-width: $extra-large) {
+      font-size: 18px;
+      line-height: 26px;
+    }
   }
 
   &__button-wrapper {
