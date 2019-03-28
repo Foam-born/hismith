@@ -1,36 +1,55 @@
 @import "../../common/styles/global-variables.scss";
 
 .section-indicators {
-  padding: 81px 0;
+  padding: 21px 0;
   background-color: $red-orange;
   color: $white;
+  @media(min-width: $extra-small) {
+    padding: 41px 0;
+  }
+  @media(min-width: $extra-large) {
+    padding: 81px 0;
+  }
 
   &__item {
     display: flex;
+    flex-direction: column;
+    @media(min-width: $medium) {
+      flex-direction: row;
+    }
   }
 
   &__number {
     margin-right: 10px;
     padding-right: 10px;
     position: relative;
-    font-size: 70px;
+    font-size: 42px;
     line-height: 48px;
     font-family: $font-family-pt-serif;
+    @media(min-width: $extra-large) {
+      font-size: 70px;
+    }
 
     &::after {
       position: absolute;
       left: 100%;
       top: 0;
-      content: '';
       width: 1px;
       height: 100%;
       background-color: $white;
+      @media(min-width: $medium) {
+        content: '';
+      }
     }
   }
 
   &__text {
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 14px;
     font-family: $font-family-pt-sans;
+    @media(min-width: $extra-large) {
+      font-size: 24px;
+      line-height: 24px;
+    }
   }
 }

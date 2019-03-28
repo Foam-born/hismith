@@ -59,21 +59,7 @@ $(document).ready(function () {
         arrows: true,
         fade: true,
         prevArrow: $photoArrowPrev,
-        nextArrow: $photoArrowNext,
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
-        ]
+        nextArrow: $photoArrowNext
     });
 
     $textSliderList.slick({
@@ -82,21 +68,7 @@ $(document).ready(function () {
         infinite: false,
         arrows: true,
         prevArrow: $textArrowPrev,
-        nextArrow: $textArrowNext,
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
-        ]
+        nextArrow: $textArrowNext
     });
 
     function hideArrowPrev($parrent, arrowPrev) {

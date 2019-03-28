@@ -17,18 +17,31 @@
     margin-bottom: 50px;
   }
 
+  &__menu-list {
+  }
+
+  &__menu-item {
+  }
+
   &__menu-link {
-    font-size: 18px;
+    font-size: 14px;
     color: $white;
+    @media(min-width: $extra-large) {
+      font-size: 18px;
+    }
   }
 
   &__submenu-list {
     margin-top: 22px;
     list-style-type: none;
     font-family: $font-family-pt-sans;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 12px;
+    line-height: 20px;
     color: $silver-chalice;
+    @media(min-width: $extra-large) {
+      font-size: 16px;
+      line-height: 26px;
+    }
   }
 
   &__contacts {
@@ -42,16 +55,27 @@
 
   &__subscribe {
     margin-right: 40px;
+    padding-left: 15px;
     color: $white;
     font-family: $font-family-pt-sans;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
+    @media(min-width: $extra-large) {
+      padding-left: 0;
+      max-width: 95px;
+      font-size: 16px;
+    }
   }
 
   &__social-network-list {
+    padding-left: 15px;
+    max-width: 150px;
     padding-bottom: 5px;
     display: flex;
     justify-content: space-between;
+    @media(min-width: $extra-large) {
+      padding-left: 0;
+    }
   }
 
   &__social-network-link {
@@ -60,24 +84,27 @@
 
   &__submenu-item {
     position: relative;
-    padding-left: 20px;
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 13px;
-      left: 0;
-      background-color: $red-orange;
-      width: 10px;
-      height: 1px;
-      transition: .3s;
-    }
-
-    &:hover {
+    @media(min-width: $extra-large) {
+      padding-left: 20px;
       &::before {
+        content: '';
+        position: absolute;
+        top: 13px;
         left: 0;
+        background-color: $red-orange;
+        width: 10px;
+        height: 1px;
+        transition: .3s;
+      }
+
+      &:hover {
+        &::before {
+          left: 0;
+        }
       }
     }
+
   }
 
   &__small-text {

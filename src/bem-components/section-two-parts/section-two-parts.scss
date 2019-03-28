@@ -3,8 +3,12 @@
 .section-two-parts {
   padding: 0;
 
+
   &__h2 {
-    margin-bottom: 64px;
+    margin-bottom: 39px;
+    @media(min-width: $extra-large) {
+      margin-bottom: 64px;
+    }
   }
 
   &__arrow {
@@ -12,37 +16,56 @@
   }
 
   &__img {
-    width: 300px;
-    height: 212px;
+    width: 183px;
+    height: 129px;
     border-radius: 1px;
+    @media($extra-large) {
+      width: 300px;
+      height: 212px;
+    }
   }
 
   &__figcaption {
     margin-top: 13px;
     font-family: $font-family-pt-serif;
     font-style: italic;
-    font-size: 18px;
-    line-height: 34px;
+    font-size: 11px;
+    line-height: 20px;
+    @media($extra-large) {
+      font-size: 18px;
+      line-height: 34px;
+    }
   }
 
   &__title {
-    margin-bottom: 28px;
+
     color: $red-orange;
     font-family: $font-family-pt-sans;
-    font-size: 30px;
-    line-height: 23px;
+    font-size: 18px;
+    line-height: 18px;
+    @media($extra-large) {
+      font-size: 30px;
+      line-height: 23px;
+    }
   }
 
   &__text {
+    margin-top: 28px;
     font-family: $font-family-pt-serif;
     font-style: italic;
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 11px;
+    line-height: 16px;
+    @media($extra-large) {
+      font-size: 18px;
+      line-height: 26px;
+    }
   }
 
   &__photo-slider {
-    padding-right: 50px;
     color: $white;
+    @media(min-width: $extra-large) {
+      padding-right: 50px;
+    }
   }
 
    &__slider-item {
@@ -50,17 +73,36 @@
    }
 
   &__text-slider {
-    padding-left: 101px;
     color: $dove-gray;
+    @media(min-width: $medium) {
+      padding-left: 64px;
+    }
+    @media(min-width: $extra-large) {
+      padding-left: 101px;
+    }
   }
 
   &__part {
     position: relative;
-    padding-top: 60px;
-    padding-bottom: 85px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @media(min-width: $extra-large) {
+      padding-top: 60px;
+      padding-bottom: 85px;
+    }
 
     &--bg-dove-gray {
       background-color: $dove-gray;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 100%;
+        background-color: $dove-gray;
+        width: 1000%;
+        height: 100%;
+      }
 
       &::before {
         content: '';
@@ -71,10 +113,26 @@
         width: 1000%;
         height: 100%;
       }
+
+      @media(min-width: $medium) {
+        &::after {
+          display: none;
+        }
+      }
     }
 
     &--bg-alto {
       background-color: $alto;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 100%;
+        background-color: $alto;
+        width: 1000%;
+        height: 100%;
+      }
 
       &::after {
         content: '';
@@ -84,6 +142,12 @@
         background-color: $alto;
         width: 1000%;
         height: 100%;
+      }
+
+      @media(min-width: $medium) {
+        &::before {
+          display: none;
+        }
       }
     }
   }
