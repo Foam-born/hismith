@@ -4,7 +4,7 @@
   color: $white;
 
   &__slider-item {
-    height: 690px;
+    height: 414px;
     padding-bottom: 60px;
     position: relative;
     &::after {
@@ -12,10 +12,19 @@
       position: absolute;
       right: 35px;
       top: 105px;
-      width: 243px;
-      height: 469px;
+      width: 150px;
+      height: 290px;
       background-image: url('/images/lines--red.png');
       background-size: cover;
+
+      @media(min-width: $extra-large) {
+        width: 243px;
+        height: 469px;
+      }
+    }
+
+    @media(min-width: $extra-large){
+      height: 690px;
     }
   }
 

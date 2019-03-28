@@ -9,7 +9,11 @@
 
     .section__slider-item {
       background-size: cover;
-      background-position: top;
+      background-position: 30% 50%;
+
+      @media(min-width: $extra-small) {
+        background-position: top;
+      }
 
       & .container {
         height: 100%;
@@ -72,9 +76,17 @@
   &__h1 {
     margin-bottom: 5px;
     max-width: 644px;
-    font-size: 48px;
-    line-height: 48px;
+    font-size: 23px;
+    line-height: 28.8px;
     font-family: $font-family-pt-serif;
+    @media(min-width: $extra-small){
+      font-size: 28px;
+    }
+
+    @media(min-width: $large-custom){
+      font-size: 48px;
+      line-height: 48px;
+    }
   }
 
   &__h2 {

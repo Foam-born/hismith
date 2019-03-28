@@ -2,8 +2,11 @@
 
 .languages-switch {
   float: right;
-  font-size: 12px;
+  font-size: 7.2px;
   color: $black;
+  @media(min-width: $large-custom){
+    font-size: 12px;
+  }
 
   &__list {
     display: flex;

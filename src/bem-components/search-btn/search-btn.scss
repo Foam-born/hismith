@@ -2,9 +2,14 @@
 
 .search-btn {
   display: block;
-  width: 19px;
-  height: 19px;
+  width: 11.5px;
+  height: 15px;
+  @media(min-width: $large-custom){
+    width: 19px;
+    height: 19px;
+  }
   &__img {
+    display: block;
     width: 100%;
     height: 100%;
     fill: $black;

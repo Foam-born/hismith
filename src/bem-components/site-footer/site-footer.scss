@@ -1,6 +1,7 @@
 @import "../../common/styles/global-variables.scss";
 
 .site-footer {
+  padding-bottom: 0;
   background-color: $dove-gray;
 
   &__link {
@@ -86,6 +87,18 @@
   }
 
   &__last-block {
+    position: relative;
     margin-top: 44px;
+    padding-bottom: 30px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: -100%;
+      width: 1000vw;
+      height: 10px;
+      background-color: $red-orange;
+    }
   }
 }
