@@ -1,0 +1,39 @@
+@import "../../common/styles/global-variables.scss";
+
+.decor-line-list {
+  display: flex;
+
+  &__decor-line {
+    width: 2px;
+    height: 36px;
+    background-color: $red-orange;
+
+    &:first-child {
+      margin-right: 176px;
+    }
+
+    &:nth-child(2) {
+      margin-right: 125px;
+    }
+
+    &:nth-child(3) {
+      margin-right: 99px;
+    }
+
+    &:nth-child(4) {
+      margin-right: 74px;
+    }
+
+    &:nth-child(5) {
+      margin-right: 22px;
+    }
+
+    &:nth-child(6) {
+      margin-right: 22px;
+    }
+
+    &:nth-child(7){
+      margin-right: 23px;
+    }
+  }
+}

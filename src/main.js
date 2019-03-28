@@ -49,6 +49,8 @@ import './bem-components/search-btn/search-btn.scss'
 import './bem-components/button/button.scss'
 import './bem-components/site-select/site-select.scss'
 import './bem-components/site-select/site-select'
+import './bem-components/social-network-link/social-network-link.scss'
+import './bem-components/decor-line-list/decor-line-list.scss'
 
 // vue components
 

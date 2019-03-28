@@ -3,8 +3,89 @@
 .site-footer {
   background-color: $dove-gray;
 
+  &__link {
+    color: $silver-chalice;
+
+    &:hover {
+      color: $red-orange;
+      text-decoration: none;
+    }
+  }
+
+  &__main-menu {
+    margin-bottom: 50px;
+  }
+
   &__menu-link {
     font-size: 18px;
     color: $white;
+  }
+
+  &__submenu-list {
+    margin-top: 22px;
+    list-style-type: none;
+    font-family: $font-family-pt-sans;
+    font-size: 16px;
+    line-height: 26px;
+    color: $silver-chalice;
+  }
+
+  &__contacts {
+    .site-footer__submenu-item {
+      padding-left: 0;
+    }
+    .site-footer__submenu-item::before {
+      display: none;
+    }
+  }
+
+  &__subscribe {
+    margin-right: 40px;
+    color: $white;
+    font-family: $font-family-pt-sans;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__social-network-list {
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__social-network-link {
+    margin-right: 30px;
+  }
+
+  &__submenu-item {
+    position: relative;
+    padding-left: 20px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 13px;
+      left: 0;
+      background-color: $red-orange;
+      width: 10px;
+      height: 1px;
+      transition: .3s;
+    }
+
+    &:hover {
+      &::before {
+        left: 0;
+      }
+    }
+  }
+
+  &__small-text {
+    font-family: $font-family-pt-sans;
+    font-size: 11px;
+    color: $silver-chalice;
+  }
+
+  &__last-block {
+    margin-top: 44px;
   }
 }
