@@ -12,5 +12,9 @@ module.exports = {
                 slick: 'slick-carousel'
             })
         ]
-    }
+    },
+
+    publicPath: process.env.NODE_ENV === 'production'
+        ? '/hismith/'
+        : '/'
 };
